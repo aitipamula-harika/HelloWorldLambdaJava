@@ -1,0 +1,27 @@
+<assembly>
+    <id>lambda-zip</id> 1
+    <formats>
+        <format>zip</format> 2
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory> 3
+    <dependencySets>
+        <dependencySet> 4
+            <includes>
+                <include>${project.groupId}:${project.artifactId}</include>
+            </includes>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/maven/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <dependencySet> 5
+            <useProjectArtifact>false</useProjectArtifact>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <outputDirectory>lib</outputDirectory> 6
+        </dependencySet>
+    </dependencySets>
+</assembly>
