@@ -2,14 +2,13 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: openjdk8
     commands:
       - echo Entered the install phase...
       - apt-get update -y
       - apt-get install -y maven
 
       # Upgrade AWS CLI to the latest version
+      - pip install --upgrade pip
       - pip install --upgrade awscli
       - pip install --upgrade aws-sam-cli
   pre_build:
@@ -20,11 +19,12 @@ phases:
     commands:
       - mvn install package 
       # Use AWS SAM to package the application by using AWS CloudFormation
-      - aws cloudformation package --template template.yml --s3-bucket lambdapipelinedemo --output-template template-export.yml
+      #- aws cloudformation package --template template.yml --s3-bucket lambdapipelinedemo --output-template template-export.yml
+       - sam package --s3-bucket lambdapipelinedemo --output-template-file packaged-template.yaml
 artifacts:
   type: zip
   files:
-    - template-export.yml
+    - packaged-template.yaml
     
     
     
