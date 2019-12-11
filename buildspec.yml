@@ -19,7 +19,7 @@ phases:
     commands:
       - mvn install package 
       # Use AWS SAM to package the application by using AWS CloudFormation
-      #- aws cloudformation package --template template.yml --s3-bucket lambdapipelinedemo --output-template template-export.yml
+     
        - sam package --s3-bucket lambdapipelinedemo --output-template-file packaged-template.yaml
 artifacts:
   type: zip
