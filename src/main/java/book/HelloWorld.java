@@ -2,6 +2,6 @@ package book;
 
 public class HelloWorld {
     public String handler(String s) {
-        return "Welcome," + s;
+        return "Hi," + s;
     }
 }
