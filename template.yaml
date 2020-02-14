@@ -4,10 +4,10 @@ Description: HelloWorldLambdaJava
 
 Resources:
 
-  HelloWorldLambdaDev:
+  HelloWorldLambdaQa:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: HelloWorldJavaDev
+      FunctionName: HelloWorldJavaQa
       Runtime: java8
       MemorySize: 512
       Handler: book.HelloWorld::handler
