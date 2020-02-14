@@ -4,10 +4,10 @@ Description: HelloWorldLambdaJava
 
 Resources:
 
-  HelloWorldLambdaDev:
+  HelloWorldLambdaProd:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: HelloWorldJavaDev
+      FunctionName: HelloWorldJavaProd
       Runtime: java8
       MemorySize: 512
       Handler: book.HelloWorld::handler
