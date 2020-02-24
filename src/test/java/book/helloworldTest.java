@@ -1,13 +1,13 @@
 package book;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class HelloTest {
   @Test
   public void successfulResponse() {
     HelloWorld app = new HelloWorld();
-    assertTrue(content.contains("\"Hi prod\""));
+    assertEquals("Here is test for Hello World String: ", "Hi prod", HelloWorld());
   }
 }
