@@ -1,13 +1,17 @@
 package book;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
-public class HelloTest {
-  @Test
-  public void successfulResponse() {
-    HelloWorld app = new HelloWorld();
-    assertEquals("Here is test for Hello World String: ", "Hi prod", HelloWorld());
-  }
-}
+public class HelloTest1 {
+
+	@Test
+	  public void successfulResponse() {
+	    HelloWorld app = new HelloWorld();
+	    String str = app.handler("abc");//override in class as prod
+	    System.out.println(str);
+	    assertEquals("Hi,prod", str);
+	  }
+
+} 
