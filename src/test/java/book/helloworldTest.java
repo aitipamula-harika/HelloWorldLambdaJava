@@ -11,7 +11,7 @@ public class helloworldTest {
 	    HelloWorld app = new HelloWorld();
 	    String str = app.handler("abc");//override in class as prod
 	    System.out.println(str);
-	    assertEquals("Hi,prod", str);
+	    assertEquals("abc", str);
 	  }
 
 } 
