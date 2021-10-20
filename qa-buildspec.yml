@@ -19,7 +19,7 @@ phases:
   build:
     commands:
       - mvn install package 
-      - sam package --s3-bucket pipeline-harika --output-template-file packaged-template.yaml --template-file qa-template.yaml
+      - sam package --s3-bucket pipeline-harika --output-template-file packaged-template.yaml --template-file qa-template.yml
 artifacts:
   files:
     - packaged-template.yaml
