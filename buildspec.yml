@@ -19,7 +19,7 @@ phases:
     commands:
       - mvn package
       # Use AWS SAM to package the application by using AWS CloudFormation
-      - sam package --s3-bucket codepipeline-us-west-2-940504386797 --output-template-file packaged-template.yaml --template-file template.yaml
+      - sam package --s3-bucket pipeline123 --output-template-file packaged-template.yaml --template-file template.yaml
      # - sam package --s3-bucket codepipeline-us-west-2-940504386797 --output-template-file packaged-qa-template.yaml --template-file template-qa.yaml
 artifacts:
   type: zip
