@@ -25,7 +25,7 @@ artifacts:
   type: zip
   files:
     - packaged-template.yaml
-  #  - packaged-qa-template.yaml
+  ##  - packaged-qa-template.yaml
     
     
     
